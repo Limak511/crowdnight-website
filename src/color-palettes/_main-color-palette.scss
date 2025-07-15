@@ -1,0 +1,11 @@
+$bg-gradient: linear-gradient(225deg, #ef6351 0%, #5d302b 42%, #240f0d 72%);
+$bg-gradient-oklch: linear-gradient(
+  225deg in oklch,
+  oklch(0.6734 0.1765 29.78) 0%,
+  oklch(0.3663 0.0665 27.42) 42%,
+  oklch(0.1995 0.036 26.48) 72%
+);
+
+$button-color: #d79891;
+$accent-color: #f3c8c4;
+$button-shadow-color: #72514d;

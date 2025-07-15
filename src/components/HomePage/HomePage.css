@@ -1,0 +1,33 @@
+.home {
+  height: 100vh;
+  background-image: linear-gradient(225deg in oklch, oklch(67.34% 0.1765 29.78deg) 0%, oklch(36.63% 0.0665 27.42deg) 42%, oklch(19.95% 0.036 26.48deg) 72%);
+  display: flex;
+}
+.home .left-block {
+  width: 45%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 26px;
+  padding: 75px;
+}
+.home .left-block img {
+  width: 100%;
+}
+.home .left-block .title-tag {
+  margin: 0;
+  background-color: #d79891;
+  padding: 0 30px;
+  line-height: 1.2;
+  font-size: 1.5em;
+  border: 1px solid #f3c8c4;
+  border-radius: 15px;
+}
+.home .right-block {
+  width: 55%;
+  height: 100vh;
+}
+
+/*# sourceMappingURL=HomePage.css.map */

@@ -1,0 +1,35 @@
+@use "main-color-palette" as mainCP;
+$blocks-height: 100vh;
+
+.home {
+  height: 100vh;
+  background-image: mainCP.$bg-gradient-oklch;
+  display: flex;
+  //   padding: 100px;
+  .left-block {
+    width: 45%;
+    height: $blocks-height;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 26px;
+    padding: 75px;
+    img {
+      width: 100%;
+    }
+    .title-tag {
+      margin: 0;
+      background-color: mainCP.$button-color;
+      padding: 0 30px;
+      line-height: 1.2;
+      font-size: 1.5em;
+      border: 1px solid mainCP.$accent-color;
+      border-radius: 15px;
+    }
+  }
+  .right-block {
+    width: 55%;
+    height: $blocks-height;
+  }
+}
