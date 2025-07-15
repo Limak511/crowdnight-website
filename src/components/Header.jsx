@@ -1,6 +1,6 @@
 import React from "react";
-import "./Header.css";
-import crowdnightLogo from "../../assets/crowdnight-logo.png";
+import "../css/Header.css";
+import crowdnightLogo from "../assets/crowdnight-logo.png";
 
 export default function Header() {
   return (

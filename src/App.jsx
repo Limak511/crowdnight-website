@@ -1,6 +1,6 @@
-import "./App.css";
-import Header from "./components/Header/Header.jsx";
-import HomePage from "./components/HomePage/HomePage.jsx";
+import "./css/App.css";
+import Header from "./components/Header.jsx";
+import HomePage from "./components/HomePage.jsx";
 
 function App() {
   return (

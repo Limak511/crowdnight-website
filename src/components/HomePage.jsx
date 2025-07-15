@@ -1,6 +1,6 @@
 import React from "react";
-import "./HomePage.css";
-import justgrowTitle from "../../assets/justgrow-title.png";
+import "../css/HomePage.css";
+import justgrowTitle from "../assets/justgrow-title.png";
 
 export default function HomePage() {
   return (
