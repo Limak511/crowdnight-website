@@ -1,6 +1,12 @@
 import React from "react";
 import "../css/HomePage.css";
 import justgrowTitle from "../assets/justgrow-title.png";
+import justgrowImage1 from "../assets/justgrow-image-1.png";
+import justgrowImage2 from "../assets/justgrow-image-2.png";
+import justgrowImage3 from "../assets/justgrow-image-3.png";
+import justgrowImage4 from "../assets/justgrow-image-4.png";
+import leftArrowIcon from "../assets/left-arrow-icon.svg";
+import rightArrowIcon from "../assets/right-arrow-icon.svg";
 import steamIcon from "../assets/steam.svg";
 
 export default function HomePage() {
@@ -22,7 +28,36 @@ export default function HomePage() {
             <p>Wishlist on Steam</p>
           </a>
         </div>
-        <div className="right-block"></div>
+        <div className="right-block">
+          <img
+            src={justgrowImage3}
+            alt="justgrow-image"
+            className="justgrow-image-main"
+          />
+          <div className="image-slider">
+            <img
+              src={justgrowImage1}
+              alt="justgrow-image"
+              className="justgrow-image "
+            />
+            <img
+              src={justgrowImage3}
+              alt="justgrow-image"
+              className="justgrow-image justgrow-image-main-small"
+            />
+            <img
+              src={justgrowImage2}
+              alt="justgrow-image"
+              className="justgrow-image"
+            />
+            <div className="left-arrow arrows">
+              <img src={leftArrowIcon} alt="left-arrow-icon" />
+            </div>
+            <div className="right-arrow arrows">
+              <img src={rightArrowIcon} alt="right-arrow-icon" />
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

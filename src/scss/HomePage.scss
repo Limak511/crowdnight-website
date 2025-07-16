@@ -1,11 +1,12 @@
 @use "main-color-palette" as mainCP;
+@use "mixins" as mx;
 $blocks-height: 100vh;
+$arrow-bg-blur-amount: 4px;
 
 .home {
   height: 100vh;
   background-image: mainCP.$bg-gradient-oklch;
   display: flex;
-  //   padding: 100px;
   .left-block {
     width: 45%;
     height: $blocks-height;
@@ -23,7 +24,7 @@ $blocks-height: 100vh;
     .title-tag {
       margin: 0;
       background-color: mainCP.$button-color;
-      padding: 0 30px;
+      padding: 0 25px;
       line-height: 1.2;
       font-size: 1.25em;
       border: 1px solid mainCP.$accent-color;
@@ -45,6 +46,7 @@ $blocks-height: 100vh;
       color: inherit;
       text-decoration: none;
       z-index: 1;
+      transition: all 0.2s ease-in-out;
       img {
         $steam-icon-size: 75px;
         height: $steam-icon-size;
@@ -57,11 +59,61 @@ $blocks-height: 100vh;
       }
       &:hover {
         cursor: pointer;
+        transform: translateY(10px);
       }
     }
   }
   .right-block {
     width: 55%;
     height: $blocks-height;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 65px;
+    padding-top: 70px;
+    .justgrow-image-main {
+      width: 800px;
+      height: 450px;
+      box-shadow: 0 20px 50px 5px #000000db;
+    }
+    .image-slider {
+      height: 200px;
+      width: 800px;
+      display: flex;
+      justify-content: space-around;
+      position: relative;
+      .justgrow-image {
+        width: 176px;
+        height: 99px;
+        box-shadow: 0 20px 50px 5px #0000008e;
+      }
+      .justgrow-image-main-small {
+        width: 264px;
+        height: 148px;
+      }
+
+      // Arrows
+      .arrows {
+        position: absolute;
+        width: 100px;
+        height: 200px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding-top: 25px;
+        img {
+          height: 100px;
+        }
+      }
+      .left-arrow {
+        left: 0;
+        @include mx.arrow-blur-bg(right, $arrow-bg-blur-amount);
+      }
+      .right-arrow {
+        right: 0;
+        @include mx.arrow-blur-bg(left, $arrow-bg-blur-amount);
+      }
+    }
   }
 }
