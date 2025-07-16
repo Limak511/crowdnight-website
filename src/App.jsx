@@ -5,7 +5,7 @@ import HomePage from "./components/HomePage.jsx";
 function App() {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <div className="container">
         <HomePage />
         <div className="just-grow"></div>
