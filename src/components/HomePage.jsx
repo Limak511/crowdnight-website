@@ -25,6 +25,16 @@ export default function HomePage() {
     );
   };
 
+  // Calculate the three images to display in the thumbnail slider
+  const imagesToDisplay = [
+    (mainImageIndex - 1 + images.length) % images.length,
+    mainImageIndex,
+    (mainImageIndex + 1) % images.length,
+  ].map((originalIndex) => ({
+    image: images[originalIndex],
+    index: originalIndex,
+  }));
+
   return (
     <>
       <div className="home">
@@ -50,7 +60,7 @@ export default function HomePage() {
             className="justgrow-image-main"
           />
           <div className="image-slider">
-            {images.map((image, index) => (
+            {imagesToDisplay.map(({ image, index }) => (
               <img
                 key={index}
                 src={image}
