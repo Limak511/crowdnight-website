@@ -1,7 +1,7 @@
 @mixin arrow-blur-bg($direction, $blurAmount) {
   -webkit-backdrop-filter: blur($blurAmount);
   backdrop-filter: blur($blurAmount);
-  $gradient-mask: linear-gradient(to $direction, black 20%, transparent 100%);
+  $gradient-mask: linear-gradient(to $direction, black 50%, transparent 100%);
   -webkit-mask-image: $gradient-mask;
   mask-image: $gradient-mask;
 }

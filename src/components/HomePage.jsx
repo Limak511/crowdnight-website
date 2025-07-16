@@ -11,7 +11,7 @@ import steamIcon from "../assets/steam.svg";
 
 export default function HomePage() {
   const images = [sliderImage1, sliderImage2, sliderImage3, sliderImage4];
-  const [mainImageIndex, setMainImageIndex] = useState(1);
+  const [mainImageIndex, setMainImageIndex] = useState(2);
 
   const handlePrevClick = () => {
     setMainImageIndex((prevIndex) =>
@@ -55,6 +55,7 @@ export default function HomePage() {
         </div>
         <div className="right-block">
           <img
+            key={mainImageIndex}
             src={images[mainImageIndex]}
             alt={`Slider Image ${mainImageIndex + 1}`}
             className="justgrow-image-main"

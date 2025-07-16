@@ -76,6 +76,7 @@ $arrow-bg-blur-amount: 4px;
       width: 800px;
       height: 450px;
       box-shadow: 0 20px 50px 5px #000000db;
+      animation: fadeScaleUp 0.4s ease-out;
     }
     .image-slider {
       height: 200px;
@@ -96,7 +97,7 @@ $arrow-bg-blur-amount: 4px;
       // Arrows
       .arrows {
         position: absolute;
-        width: 100px;
+        width: 150px;
         height: 200px;
         display: flex;
         align-items: flex-start;
@@ -104,6 +105,11 @@ $arrow-bg-blur-amount: 4px;
         padding-top: 25px;
         img {
           height: 100px;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            transform: scale(1.3);
+            cursor: pointer;
+          }
         }
       }
       .left-arrow {
@@ -115,5 +121,16 @@ $arrow-bg-blur-amount: 4px;
         @include mx.arrow-blur-bg(left, $arrow-bg-blur-amount);
       }
     }
+  }
+}
+
+@keyframes fadeScaleUp {
+  from {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
