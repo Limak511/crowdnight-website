@@ -37,62 +37,64 @@ export default function HomePage() {
 
   return (
     <>
-      <div className="home">
-        <div className="left-block">
-          <img src={justgrowTitle} alt="justgrow-title" />
-          <p className="title-tag">Roguelike</p>
-          <p className="title-tag">Action</p>
-          <p className="title-tag">Indie</p>
-          <a
-            href="https://store.steampowered.com/app/3402540/Just_Grow/"
-            target="_blank"
-            rel="noreferrer"
-            className="steam-button"
-          >
-            <img src={steamIcon} alt="Steam Icon" />
-            <p>Wishlist on Steam</p>
-          </a>
-        </div>
-        <div className="right-block">
-          <img
-            key={mainImageIndex}
-            src={images[mainImageIndex]}
-            alt={`Slider Image ${mainImageIndex + 1}`}
-            className="justgrow-image-main"
-          />
-          <div className="image-slider">
-            {imagesToDisplay.map(({ image, index }) => (
-              <img
-                key={index}
-                src={image}
-                alt={`Slider Image ${index + 1}`}
-                className={`justgrow-image ${
-                  index === mainImageIndex ? "justgrow-image-main-small" : ""
-                }`}
-                onClick={() => setMainImageIndex(index)}
-              />
-            ))}
-            <div
-              className="left-arrow arrows"
-              onClick={handlePrevClick}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") handlePrevClick();
-              }}
-              role="button"
-              tabIndex={0}
+      <div className="home-bg">
+        <div className="home-content">
+          <div className="left-block">
+            <img src={justgrowTitle} alt="justgrow-title" />
+            <p className="title-tag">Roguelike</p>
+            <p className="title-tag">Action</p>
+            <p className="title-tag">Indie</p>
+            <a
+              href="https://store.steampowered.com/app/3402540/Just_Grow/"
+              target="_blank"
+              rel="noreferrer"
+              className="steam-button"
             >
-              <img src={leftArrowIcon} alt="Left Arrow Icon" />
-            </div>
-            <div
-              className="right-arrow arrows"
-              onClick={handleNextClick}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") handleNextClick();
-              }}
-              role="button"
-              tabIndex={0}
-            >
-              <img src={rightArrowIcon} alt="Right Arrow Icon" />
+              <img src={steamIcon} alt="Steam Icon" />
+              <p>Wishlist on Steam</p>
+            </a>
+          </div>
+          <div className="right-block">
+            <img
+              key={mainImageIndex}
+              src={images[mainImageIndex]}
+              alt={`Slider Image ${mainImageIndex + 1}`}
+              className="justgrow-image-main"
+            />
+            <div className="image-slider">
+              {imagesToDisplay.map(({ image, index }) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt={`Slider Image ${index + 1}`}
+                  className={`justgrow-image ${
+                    index === mainImageIndex ? "justgrow-image-main-small" : ""
+                  }`}
+                  onClick={() => setMainImageIndex(index)}
+                />
+              ))}
+              <div
+                className="left-arrow arrows"
+                onClick={handlePrevClick}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") handlePrevClick();
+                }}
+                role="button"
+                tabIndex={0}
+              >
+                <img src={leftArrowIcon} alt="Left Arrow Icon" />
+              </div>
+              <div
+                className="right-arrow arrows"
+                onClick={handleNextClick}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") handleNextClick();
+                }}
+                role="button"
+                tabIndex={0}
+              >
+                <img src={rightArrowIcon} alt="Right Arrow Icon" />
+              </div>
             </div>
           </div>
         </div>

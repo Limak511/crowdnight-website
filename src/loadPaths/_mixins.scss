@@ -16,3 +16,11 @@
   font-style: normal;
   font-variation-settings: "slnt" 0, "wdth" 100;
 }
+
+@mixin resolution-fixed-container {
+  width: 90%; /* Use a percentage for fluidity */
+  max-width: 1400px; /* The maximum width the content will stretch to */
+  margin-left: auto; /* These two center the container */
+  margin-right: auto;
+  // padding: 20px; /* Some breathing room */
+}
