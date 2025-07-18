@@ -1,6 +1,7 @@
 import "./css/App.css";
 import Header from "./components/Header.jsx";
 import HomePage from "./components/HomePage.jsx";
+import JustGrowDescription from "./components/JustGrowDescription.jsx";
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <Header />
       <div className="container">
         <HomePage />
-        <div className="just-grow"></div>
+        <JustGrowDescription />
         <div className="about-us"></div>
         <div className="contact"></div>
         <div className="footer"></div>
