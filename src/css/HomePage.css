@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap");
 .home {
   height: 100vh;
   background-image: linear-gradient(225deg in oklch, oklch(67.34% 0.1765 29.78deg) 0%, oklch(36.63% 0.0665 27.42deg) 42%, oklch(19.95% 0.036 26.48deg) 72%);

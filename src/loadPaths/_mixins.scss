@@ -5,3 +5,14 @@
   -webkit-mask-image: $gradient-mask;
   mask-image: $gradient-mask;
 }
+
+// Font - TikTok Sans
+@import url("https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap");
+
+@mixin tiktok-sans-font($weight: 300) {
+  font-family: "TikTok Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: $weight;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "wdth" 100;
+}
