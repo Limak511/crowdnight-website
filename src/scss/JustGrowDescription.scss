@@ -1,2 +1,6 @@
+@use "main-color-palette" as mainCP;
+
 .description-container {
+  height: 100vh;
+  background-color: mainCP.$bg-color;
 }
