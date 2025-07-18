@@ -98,37 +98,6 @@
   width: 264px;
   height: 148px;
 }
-.home-content .right-block .image-slider .arrows {
-  position: absolute;
-  width: 150px;
-  height: 200px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding-top: 25px;
-}
-.home-content .right-block .image-slider .arrows img {
-  height: 100px;
-  transition: all 0.15s ease-out;
-}
-.home-content .right-block .image-slider .arrows img:hover {
-  transform: scale(1.5);
-  cursor: pointer;
-}
-.home-content .right-block .image-slider .left-arrow {
-  left: 0;
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
-  -webkit-mask-image: linear-gradient(to right, black 50%, transparent 100%);
-  mask-image: linear-gradient(to right, black 50%, transparent 100%);
-}
-.home-content .right-block .image-slider .right-arrow {
-  right: 0;
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
-  -webkit-mask-image: linear-gradient(to left, black 50%, transparent 100%);
-  mask-image: linear-gradient(to left, black 50%, transparent 100%);
-}
 
 @keyframes fadeScaleUp {
   from {

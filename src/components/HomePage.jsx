@@ -5,9 +5,8 @@ import sliderImage1 from "../assets/slider-images/justgrow-image-1.png";
 import sliderImage2 from "../assets/slider-images/justgrow-image-2.png";
 import sliderImage3 from "../assets/slider-images/justgrow-image-3.png";
 import sliderImage4 from "../assets/slider-images/justgrow-image-4.png";
-import leftArrowIcon from "../assets/left-arrow-icon.svg";
-import rightArrowIcon from "../assets/right-arrow-icon.svg";
 import steamIcon from "../assets/steam.svg";
+import SliderArrow from "./SliderArrow";
 
 export default function HomePage() {
   const images = [sliderImage1, sliderImage2, sliderImage3, sliderImage4];
@@ -73,28 +72,8 @@ export default function HomePage() {
                   onClick={() => setMainImageIndex(index)}
                 />
               ))}
-              <div
-                className="left-arrow arrows"
-                onClick={handlePrevClick}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") handlePrevClick();
-                }}
-                role="button"
-                tabIndex={0}
-              >
-                <img src={leftArrowIcon} alt="Left Arrow Icon" />
-              </div>
-              <div
-                className="right-arrow arrows"
-                onClick={handleNextClick}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") handleNextClick();
-                }}
-                role="button"
-                tabIndex={0}
-              >
-                <img src={rightArrowIcon} alt="Right Arrow Icon" />
-              </div>
+              <SliderArrow direction="left" onClick={handlePrevClick} />
+              <SliderArrow direction="right" onClick={handleNextClick} />
             </div>
           </div>
         </div>

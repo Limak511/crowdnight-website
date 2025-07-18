@@ -1,0 +1,28 @@
+@use "mixins" as mx;
+$arrow-bg-blur-amount: 4px;
+
+.arrows {
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 25px;
+  img {
+    height: 100px;
+    transition: all 0.15s ease-out;
+    &:hover {
+      transform: scale(1.5);
+      cursor: pointer;
+    }
+  }
+}
+.left-arrow {
+  left: 0;
+  @include mx.arrow-blur-bg(right, $arrow-bg-blur-amount);
+}
+.right-arrow {
+  right: 0;
+  @include mx.arrow-blur-bg(left, $arrow-bg-blur-amount);
+}

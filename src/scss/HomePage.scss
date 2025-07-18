@@ -1,7 +1,6 @@
 @use "main-color-palette" as mainCP;
 @use "mixins" as mx;
 $blocks-height: 100vh;
-$arrow-bg-blur-amount: 4px;
 
 .home-bg {
   background-image: mainCP.$bg-gradient-oklch;
@@ -98,34 +97,6 @@ $arrow-bg-blur-amount: 4px;
       .justgrow-image-main-small {
         width: 264px;
         height: 148px;
-      }
-
-      // Arrows
-      .arrows {
-        position: absolute;
-        width: 150px;
-        height: 200px;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        padding-top: 25px;
-        // background-color: #000;
-        img {
-          height: 100px;
-          transition: all 0.15s ease-out;
-          &:hover {
-            transform: scale(1.5);
-            cursor: pointer;
-          }
-        }
-      }
-      .left-arrow {
-        left: 0;
-        @include mx.arrow-blur-bg(right, $arrow-bg-blur-amount);
-      }
-      .right-arrow {
-        right: 0;
-        @include mx.arrow-blur-bg(left, $arrow-bg-blur-amount);
       }
     }
   }
