@@ -7,7 +7,7 @@ export default function Header() {
     <>
       <div className="header-container">
         <div className="bg-shadow"></div>
-        <div className="nav-buttons">
+        <div className="nav-buttons-container">
           <a href="#home" className="logo">
             <img src={crowdnightLogo} alt="crowdnight-logo" />
           </a>

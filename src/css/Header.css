@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap");
 .header-container {
   position: fixed;
   width: 100%;
@@ -16,7 +17,7 @@
 .header-container .logo img {
   width: 125px;
 }
-.header-container .nav-buttons {
+.header-container .nav-buttons-container {
   z-index: 1000;
   margin: 12px 25px;
   display: flex;
@@ -27,14 +28,20 @@
   position: relative;
   z-index: 1000;
   margin-top: 32px;
+  font-size: 1.25em;
   background-color: #d79891;
   color: inherit;
-  text-decoration: none;
-  font-size: 1.25em;
   padding: 10px 15px;
-  border-radius: 10px;
+  text-decoration: none;
+  border-radius: 15px;
   box-shadow: 0 7px 0 0 #72514d;
   border: 3px solid #f3c8c4;
+  transition: all 0.24s cubic-bezier(0.09, 0.38, 0.22, 0.87);
+}
+.header-container .nav-button:hover {
+  cursor: pointer;
+  transform: translateY(6px);
+  box-shadow: 0 2px 0 0 #72514d;
 }
 
 /*# sourceMappingURL=Header.css.map */

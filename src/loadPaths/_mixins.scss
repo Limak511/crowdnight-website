@@ -1,10 +1,5 @@
-@mixin arrow-blur-bg($direction, $blurAmount) {
-  -webkit-backdrop-filter: blur($blurAmount);
-  backdrop-filter: blur($blurAmount);
-  $gradient-mask: linear-gradient(to $direction, black 50%, transparent 100%);
-  -webkit-mask-image: $gradient-mask;
-  mask-image: $gradient-mask;
-}
+@use "main-color-palette" as mainCP;
+@use "sass:math";
 
 // Font - TikTok Sans
 @import url("https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap");
@@ -17,10 +12,39 @@
   font-variation-settings: "slnt" 0, "wdth" 100;
 }
 
+@mixin arrow-blur-bg($direction, $blurAmount) {
+  -webkit-backdrop-filter: blur($blurAmount);
+  backdrop-filter: blur($blurAmount);
+  $gradient-mask: linear-gradient(to $direction, black 50%, transparent 100%);
+  -webkit-mask-image: $gradient-mask;
+  mask-image: $gradient-mask;
+}
+
 @mixin resolution-fixed-container {
   width: 90%; /* Use a percentage for fluidity */
-  max-width: 1400px; /* The maximum width the content will stretch to */
-  margin-left: auto; /* These two center the container */
+  max-width: 1400px;
+  margin-left: auto;
   margin-right: auto;
   // padding: 20px; /* Some breathing room */
+}
+
+// Button
+@mixin button-template(
+  $box-shadow-y: 7px,
+  $padding: 10px 15px,
+  $transformYHover: 6px
+) {
+  background-color: mainCP.$button-color;
+  color: inherit;
+  padding: $padding;
+  text-decoration: none;
+  border-radius: 15px;
+  box-shadow: 0 math.max(7px, $box-shadow-y) 0 0 mainCP.$button-shadow-color;
+  border: 3px solid mainCP.$accent-color;
+  transition: all 0.24s cubic-bezier(0.09, 0.38, 0.22, 0.87);
+  &:hover {
+    cursor: pointer;
+    transform: translateY($transformYHover);
+    box-shadow: 0 2px 0 0 mainCP.$button-shadow-color;
+  }
 }

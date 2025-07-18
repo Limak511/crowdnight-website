@@ -1,4 +1,5 @@
 @use "main-color-palette" as mainCP;
+@use "mixins" as mx;
 
 .header-container {
   position: fixed;
@@ -22,7 +23,7 @@
       width: 125px;
     }
   }
-  .nav-buttons {
+  .nav-buttons-container {
     z-index: 1000;
     margin: 12px 25px;
     display: flex;
@@ -34,13 +35,7 @@
     position: relative;
     z-index: 1000;
     margin-top: 32px;
-    background-color: mainCP.$button-color;
-    color: inherit;
-    text-decoration: none;
     font-size: 1.25em;
-    padding: 10px 15px;
-    border-radius: 10px;
-    box-shadow: 0 7px 0 0 mainCP.$button-shadow-color;
-    border: 3px solid mainCP.$accent-color;
+    @include mx.button-template;
   }
 }
