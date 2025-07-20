@@ -17,7 +17,7 @@ $blocks-height: 100vh;
     align-items: flex-start;
     justify-content: center;
     gap: 16px;
-    padding: 0 75px;
+    padding: 70px 75px;
     // margin-top: 140px;
     & > img {
       width: 100%;
@@ -34,14 +34,12 @@ $blocks-height: 100vh;
       border-radius: 15px;
     }
     .steam-button {
-      position: absolute;
-      top: 73%;
-      left: 20%;
       display: flex;
       align-items: center;
       gap: 25px;
-      z-index: 1;
-      transform: scale(1.05);
+      transform: scale(1.05); // makes visual larger
+      margin-top: 100px;
+      align-self: center;
       @include mx.button-template(
         $box-shadow-y: 15px,
         $padding: 20px 25px,
