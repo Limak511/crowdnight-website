@@ -5,6 +5,7 @@
   position: fixed;
   width: 100%;
   z-index: 2;
+  pointer-events: none;
   .bg-shadow {
     position: fixed;
     width: 100%;
@@ -15,10 +16,8 @@
       rgba(0, 0, 0, 0.28) 20%,
       rgba(0, 0, 0, 0) 30%
     );
-    pointer-events: none;
   }
   .logo {
-    z-index: 1000;
     img {
       width: 125px;
     }
@@ -33,9 +32,13 @@
 
   .nav-button {
     position: relative;
-    z-index: 1000;
     margin-top: 32px;
     font-size: 1.25em;
     @include mx.button-template;
+  }
+
+  a {
+    z-index: 1000;
+    pointer-events: auto;
   }
 }
