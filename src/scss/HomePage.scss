@@ -68,17 +68,15 @@ $blocks-height: 100vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 65px;
-    padding-top: 70px;
+    gap: 64px;
     .justgrow-image-main {
-      width: 800px;
+      width: 100%;
       height: 450px;
       box-shadow: 0 20px 50px 5px #000000db;
       animation: fadeScaleUp 0.4s ease-out;
     }
     .image-slider {
-      height: 200px;
-      width: 800px;
+      width: 100%;
       display: flex;
       justify-content: space-around;
       position: relative;
