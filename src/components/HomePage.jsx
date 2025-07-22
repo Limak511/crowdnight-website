@@ -39,10 +39,12 @@ export default function HomePage() {
       <div className="home-bg">
         <div className="home-content">
           <div className="left-block">
-            <img src={justgrowTitle} alt="justgrow-title" />
-            <p className="title-tag">Roguelike</p>
-            <p className="title-tag">Action</p>
-            <p className="title-tag">Indie</p>
+            <div className="left-block-title">
+              <img src={justgrowTitle} alt="justgrow-title" />
+              <p className="title-tag">Roguelike</p>
+              <p className="title-tag">Action</p>
+              <p className="title-tag">Indie</p>
+            </div>
             <a
               href="https://store.steampowered.com/app/3402540/Just_Grow/"
               target="_blank"

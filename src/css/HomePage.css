@@ -16,15 +16,20 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  gap: 64px;
+  padding: 0 75px;
+}
+.home-content .left-block .left-block-title {
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 16px;
-  padding: 70px 75px;
-}
-.home-content .left-block > img {
+  gap: 10px;
   width: 100%;
-  margin-top: -70px;
-  margin-bottom: 10px;
+}
+.home-content .left-block .left-block-title > img {
+  width: 100%;
 }
 .home-content .left-block .title-tag {
   margin: 0;
@@ -36,12 +41,12 @@
   border-radius: 15px;
 }
 .home-content .left-block .steam-button {
+  align-self: center;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 25px;
   transform: scale(1.05);
-  margin-top: 100px;
-  align-self: center;
   background-color: #d79891;
   color: inherit;
   padding: 20px 25px;

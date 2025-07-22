@@ -14,15 +14,19 @@ $blocks-height: 100vh;
     height: $blocks-height;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
-    gap: 16px;
-    padding: 70px 75px;
-    // margin-top: 140px;
-    & > img {
+    gap: 64px;
+    padding: 0 75px;
+    .left-block-title {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 10px;
       width: 100%;
-      margin-top: -70px;
-      margin-bottom: 10px;
+      & > img {
+        width: 100%;
+      }
     }
     .title-tag {
       margin: 0;
@@ -34,12 +38,12 @@ $blocks-height: 100vh;
       border-radius: 15px;
     }
     .steam-button {
+      align-self: center;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 25px;
       transform: scale(1.05); // makes visual larger
-      margin-top: 100px;
-      align-self: center;
       @include mx.button-template(
         $box-shadow-y: 15px,
         $padding: 20px 25px,
