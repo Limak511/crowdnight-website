@@ -10,6 +10,7 @@
   margin-left: auto;
   margin-right: auto;
   display: flex;
+  flex-wrap: wrap;
 }
 .home-content .left-block {
   width: 45%;
@@ -80,8 +81,8 @@
   gap: 64px;
 }
 .home-content .right-block .justgrow-image-main {
-  width: 100%;
-  height: 450px;
+  width: 700px;
+  height: 393.75px;
   box-shadow: 0 20px 50px 5px rgba(0, 0, 0, 0.8588235294);
   animation: fadeScaleUp 0.4s ease-out;
 }

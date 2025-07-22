@@ -9,6 +9,7 @@ $blocks-height: 100vh;
 .home-content {
   @include mx.resolution-fixed-container;
   display: flex;
+  flex-wrap: wrap;
   .left-block {
     width: 45%;
     height: $blocks-height;
@@ -70,8 +71,8 @@ $blocks-height: 100vh;
     justify-content: center;
     gap: 64px;
     .justgrow-image-main {
-      width: 100%;
-      height: 450px;
+      width: 700px;
+      height: 393.75px;
       box-shadow: 0 20px 50px 5px #000000db;
       animation: fadeScaleUp 0.4s ease-out;
     }
